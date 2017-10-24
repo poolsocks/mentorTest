@@ -40,7 +40,7 @@ Answer each question in a written format
 
 5. Summarize what the keyword 'this' is used for?
 
-	The 'this' keyword is used to provide some type of contextual binding to the object, or the subject of the code we are executing, that is beign referenced in a function.
+	The 'this' keyword is used to provide some type of contextual binding to the object, or the subject of the code we are executing, that is being referenced in a function.
 
 	I think of it similarly to 'he' and 'she' in english. 
 
@@ -70,7 +70,7 @@ Answer each question in a written format
 
 8. How does prototype work?
 
-	All Javascript objects have a prototype which is an object that contains propertyies and methods that the object can access.
+	All Javascript objects have a prototype which is an object that contains properties and methods that the object can access.
 
 
 9. What is MVC?
@@ -86,7 +86,7 @@ Answer each question in a written format
 
 10. What is the component lifecycle?
 
-	The react component lifcycle the the cycle that a dom element goes through before, during, and after rendering.
+	The react component lifcycle the the cycle that a DOM element goes through before, during, and after rendering.
 	Examples of these would be render(), componentWillMount(), componentDidMount(), and constructor()
 
 11. What is REST?

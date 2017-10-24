@@ -2,40 +2,115 @@ Answer each question in a written format
 
 1. What does semantic HTML mean?
 
+	Semantic HTML is HTML markup that describes what the tag actually does. A <p> tag signifies a pargagraph. A <section> tag signifies a section. An <h1> tag siginifies a main header. Etc. Semantic HTML gives context and value to your content. 
+
+	
+	Using semantic HTML is best practice because it leads to an easier to navigate code base. Sure, you could make a whole website with <div> and <span> tags, but you'd get lost in your code pretty fast. 
+
 2. What is the box model?
+	
+	The box model is how you position things within css. It consists of border, margin, padding, and content. 
+	The best way I can explain it is explaining it with a present. 
+	Let's say you wanted to mail this present in a box.  
+
+	You have your present, which is considered the content. 
+	You don't want your present to move around in the box while it's being mailed, so you add some foam peanuts. Those would be the padding. 
+	Then you have your box, which is the border. You can have different thicknesses/textures of a box, as you can have different thicknesses/styles of a border.
+	Then if you don't want anything else touching your box, you'd have a margin.
+
+
 
 3. What is the difference between IDs and Classes?
 
+	Id's are for specific items and classes can be reused.
+	For example, you make have an ID tag to specify a section of your page. You'd only use this once because that section in your page only appears once. 
+	An ID should only be used once. 
+
+	What if you want to add the same background-color to all of your pages? You can reuse this class on multiple items. 
+	You can use classes as many times as you want. 
+
 4. What does the z-index do?
+
+	Z-index is used to stack elements. 
+	Let's say you want a floating action button that is always on top, no matter the element. You can set it to z-index:1000 or whatever number you choose.
+
+	Z-index's can also be negative values.
+	Let's say for some reason, you refuse to use the background style in css and want to use z-index to set a background-image. You could set the z-index to -1000.
+
 
 5. Summarize what the keyword 'this' is used for?
 
+	The 'this' keyword is used to provide some type of contextual binding to the object, or the subject of the code we are executing, that is beign referenced in a function.
+
+	I think of it similarly to 'he' and 'she' in english. 
+
+	Peter is cooking because he doesn't want to go out to eat. 
+
+	He is referring to the name, Peter. 
+
+
+
 6. What is a callback?
+	
+	A callback function is a function being passed into another function as an argument. 
 
 7. What is a closure?
 
+	A closure is a function inside of a function that has access to items within the original function.
+
+	function sayMyName() {
+		var name = "Peter"
+
+		function getMyName(){
+			console.log(name)
+		}
+		getMyName
+	}
+	sayMyName()
+
 8. How does prototype work?
 
+	All Javascript objects have a prototype which is an object that contains propertyies and methods that the object can access.
+
+
 9. What is MVC?
+	
+	Model View Controller
+	This is used to separate your app into three sections. 
+	The view is what we see. 
+	The model is what does all the heavy lifting, computing, etc. 
+	The controller recieve data from the model and pass it to the controller.
+
+	The model and view never talk to eachother. 
+
 
 10. What is the component lifecycle?
 
+	The react component lifcycle the the cycle that a dom element goes through before, during, and after rendering.
+	Examples of these would be render(), componentWillMount(), componentDidMount(), and constructor()
+
 11. What is REST?
 
+	REST is representational state transfer.
+	REST is used for designing applications that need to use an API whether it be external or internal. 
+	It allows us to use CRUD (Create, Read, Update, Destroy) requests. 
+
 12. Name three ways of getting data from the URL using express
+	
+	GET, POST, and PUT requests. 
 
-create table users (
-id serial,
-name varchar(255),
-email varchar(255)
-)
+	create table users (
+	id serial,
+	name varchar(255),
+	email varchar(255)
+	)
 
-12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
+13. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
--Get all users:
+-Get all users:  SELECT * FROM users
 
--Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+-Create a new user with the name of 'your name' and an email of 'fake@fake.com':  INSERT INTO users (name, email) VALUES ('Peter', 'fake@fake.com')
 
--Update the newly created user's name to 'Bobby Boy':
+-Update the newly created user's name to 'Bobby Boy':  UPDATE users SET name = 'Bobby Boy' WHERE name = 'Peter'
 
--Delete the newly updated user:
+-Delete the newly updated user:  DELETE FROM users WHERE name = 'Bobby Boy'
